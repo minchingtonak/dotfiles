@@ -6,7 +6,7 @@ A (hopefully) ever-growing collection of dotfiles I use.
 
 `curl -Lks https://git.io/fhQdn | /bin/bash`
 
-Or, more verbosely:
+Or, if you're not a fan of short URLs:
 
 `curl -Lks https://gist.githubusercontent.com/minchingtonak/2cadbda35ec4b0bca4232da25eb9bf15/raw | /bin/bash`
 
