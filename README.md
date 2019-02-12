@@ -2,6 +2,11 @@
 
 A (hopefully) ever-growing collection of dotfiles I use.
 
+### Requires
+
+* git
+* curl
+
 ### Install
 
 `curl -Lks https://git.io/fhQdn | /bin/bash`
