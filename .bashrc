@@ -173,3 +173,4 @@ PATH=$PATH:~/bashscripting/
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 alias config='/usr/bin/git --git-dir=/home/akmin/.cfg/ --work-tree=/home/akmin'
+export EDITOR='vim'
