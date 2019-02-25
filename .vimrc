@@ -43,6 +43,9 @@ let g:lightline = {
 map ; :
 noremap ;; ;
 map <C-O> :NERDTreeToggle<CR>
+inoremap {<CR> {<CR><BS>}<Esc>ko
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
 "map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " vimplug auto install
