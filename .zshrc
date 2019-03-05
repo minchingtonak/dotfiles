@@ -102,25 +102,12 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 alias l="ls -a --color=tty"
 
 alias gl='git log --graph --full-history --all --color \
-	--pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+  --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 
 alias config='/usr/bin/git --git-dir=/home/akmin/.cfg/ --work-tree=/home/akmin'
 
-# bind capslock to ctrl
-if grep -q Microsoft /proc/version; then
-	# we're on wsl
-else
-	setxkbmap -option ctrl:nocaps
-fi
+alias user='cd /mnt/c/Users/akmin/Documents/'
+
