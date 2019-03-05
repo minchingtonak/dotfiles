@@ -2,13 +2,22 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/akmin/.oh-my-zsh"
+export ZSH="/home/akmin/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# OS-specific config
+if grep -q Microsoft /proc/version; then
+  # we're on wsl
+  ZSH_THEME="robbyrussell"
+else
+  # bind capslock to ctrl
+  setxkbmap -option ctrl:nocaps
+  ZSH_THEME="powerlevel9k/powerlevel9k"
+fi
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=false
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( dir vcs newline user )
