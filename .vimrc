@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -12,6 +11,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'drewtempelmeyer/palenight.vim'
+
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 
 call plug#end()
 
@@ -55,3 +56,5 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+"let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycmconf.py'
