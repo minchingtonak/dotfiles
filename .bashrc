@@ -1,6 +1,12 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+if grep -q Microsoft /proc/version ; then
+  # We're on WSL and manually need to start zsh
+  if [ -t 1 ]; then
+    exec zsh
+  fi
+fi
 
 ## Colors?  Used for the prompt.
 #Regular text color
