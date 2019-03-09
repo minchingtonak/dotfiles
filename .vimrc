@@ -110,6 +110,19 @@ endif
 " =============== Remaps ============================
 map ; :
 noremap ;; ;
+" d = delete line
+" leader d = cut
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+
+nnoremap <leader>d ""d
+nnoremap <leader>D ""D
+vnoremap <leader>d ""d
+
+let mapleader = ","
+let g:mapleader = ","
 
 " =============== NERDTree config ===================
 map <C-O> :NERDTreeToggle<CR>
