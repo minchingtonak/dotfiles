@@ -19,6 +19,8 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'rhysd/vim-clang-format'
+
 call plug#end()
 
 "============General Config=============
@@ -69,12 +71,8 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
-
 " =============== Theming ===========================
-"echo grep -q Microsoft /proc/version 
+"echo grep -q Microsoft /proc/version
 
 colorscheme palenight
 " Lightline config for palenight
@@ -124,6 +122,19 @@ vnoremap <leader>d ""d
 let mapleader = ","
 let g:mapleader = ","
 
+" Auto indent pasted text
+nnoremap p p=`]<C-o>
+nnoremap P P=`]<C-o>
+
+" Autoformatting
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+
+" Easy line insertion
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
+
 " =============== NERDTree config ===================
 map <C-O> :NERDTreeToggle<CR>
 "Open NERDTree, NERDTreeFind on current file
@@ -142,6 +153,24 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeShowHidden = 1
+
+" =============== Autoformatter config ==============
+let g:clang_format#code_style = 'llvm'
+"let g:clang_format#style_options = {
+"      \ "AllowShortIfStatementsOnASingleLine" : "true",
+"      \ "ColumnLimit" : 90,
+"      \ "IndentWidth" : 2,
+"      \ "KeepEmptyLinesAtTheStartOfBlocks" : "false",
+"      \ "MaxEmptyLinesToKeep" : 1,
+"      \ "PointerAlignment" : "PAS_Right",
+"      \ "SortUsingDeclarations" : "true",
+"      \ "SpaceBeforeRangeBasedForLoopColon" : "true"}
+
+let g:clang_format#style_options = {
+      \ "IndentWidth" : 2,
+      \ "ColumnLimit" : 90}
+
+let g:clang_format#detect_style_file = 0
 
 " =============== Misc ==============================
 " vimplug auto install
