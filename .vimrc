@@ -182,6 +182,10 @@ endif
 
 let g:ycm_global_ycm_extra_conf = '~/.ycmconf.py' " YouCompleteMe default C/C++ compile flags
 
+if &diff
+  highlight! link DiffText MatchParen
+endif
+
 " Left here for later use
 if (match(system("cat /proc/version"), "Microsoft") != -1)
   " If we're in WSL
