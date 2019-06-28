@@ -111,3 +111,12 @@ alias config='/usr/bin/git --git-dir=/home/akmin/.cfg/ --work-tree=/home/akmin'
 
 alias user='cd /mnt/c/Users/akmin/Documents/'
 
+
+# git config
+git config --global --add difftool.prompt false
+
+# cd to Documents folder if we're on Windows
+grep -q Microsoft /proc/version
+if [ $? -eq 0 ]; then
+	user
+fi
