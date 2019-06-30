@@ -102,18 +102,7 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-alias l="ls -a --color=tty"
-
-alias gl='git log --graph --full-history --all --color \
-  --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
-
-alias config='/usr/bin/git --git-dir=/home/akmin/.cfg/ --work-tree=/home/akmin'
-
-alias user='cd /mnt/c/Users/akmin/Documents/'
-
-
-# git config
-git config --global --add difftool.prompt false
+source $HOME/.bash_aliases
 
 # cd to Documents folder if we're on Windows
 grep -q Microsoft /proc/version
