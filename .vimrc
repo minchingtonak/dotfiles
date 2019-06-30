@@ -51,7 +51,7 @@ set cursorline
 "set nobackup
 "set nowb
 
-set directory^=$HOME/.vim/tmp// " Keep all swapfiles in central dir
+set directory^=$HOME/.vim/swaps// " Keep all swapfiles in central dir
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -110,14 +110,14 @@ map ; :
 noremap ;; ;
 " d = delete line
 " leader d = cut
-nnoremap x "_x
-nnoremap d "_d
-nnoremap D "_D
-vnoremap d "_d
+"nnoremap x "_x
+"nnoremap d "_d
+"nnoremap D "_D
+"vnoremap d "_d
 
-nnoremap <leader>d ""d
-nnoremap <leader>D ""D
-vnoremap <leader>d ""d
+"nnoremap <leader>d ""d
+"nnoremap <leader>D ""D
+"vnoremap <leader>d ""d
 
 let mapleader = ","
 let g:mapleader = ","
@@ -158,8 +158,8 @@ let NERDTreeShowHidden = 1
 let g:clang_format#code_style = 'llvm'
 "let g:clang_format#style_options = {
 "      \ "AllowShortIfStatementsOnASingleLine" : "true",
-"      \ "ColumnLimit" : 90,
-"      \ "IndentWidth" : 2,
+"      \ "ColumnLimit" : 100,
+"      \ "IndentWidth" : 4,
 "      \ "KeepEmptyLinesAtTheStartOfBlocks" : "false",
 "      \ "MaxEmptyLinesToKeep" : 1,
 "      \ "PointerAlignment" : "PAS_Right",
@@ -167,8 +167,8 @@ let g:clang_format#code_style = 'llvm'
 "      \ "SpaceBeforeRangeBasedForLoopColon" : "true"}
 
 let g:clang_format#style_options = {
-      \ "IndentWidth" : 2,
-      \ "ColumnLimit" : 90}
+      \ "IndentWidth" : 4,
+      \ "ColumnLimit" : 100}
 
 let g:clang_format#detect_style_file = 0
 
