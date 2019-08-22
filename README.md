@@ -9,6 +9,8 @@ A (hopefully) ever-growing collection of dotfiles I use.
 
 ### Install
 
+First, be sure to setup ssh keys for github so you can actually pull this repo.
+
 `curl -Lks https://git.io/fhQdn | /bin/bash`
 
 Or, if you're not a fan of short URLs:
