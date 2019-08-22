@@ -12,12 +12,11 @@ export ZSH="/home/akmin/.oh-my-zsh"
 # OS-specific config
 if grep -q Microsoft /proc/version; then
   # we're on wsl
-  ZSH_THEME="robbyrussell"
 else
   # bind capslock to ctrl
   setxkbmap -option ctrl:nocaps
-  ZSH_THEME="powerlevel9k/powerlevel9k"
 fi
+ZSH_THEME="robbyrussell"
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=false
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( dir vcs newline user )
@@ -105,7 +104,7 @@ export EDITOR='vim'
 source $HOME/.bash_aliases
 
 # cd to Documents folder if we're on Windows
-grep -q Microsoft /proc/version
-if [ $? -eq 0 ]; then
-	user
-fi
+#grep -q Microsoft /proc/version
+#if [ $? -eq 0 ]; then
+#	user
+#fi
